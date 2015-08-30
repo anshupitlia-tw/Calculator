@@ -1,8 +1,12 @@
 package com.tw.calculator;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Calculator {
     private double number;
     private static double INITIAL_NUMBER = 0.0;
+    private static List<String> SUPPORTED_OPERATIONS = Arrays.asList(new String[]{"add", "subtract", "multiply", "divide", "cancel", "exit"});
 
     public double add(double addend) {
         return number = number + addend;
@@ -30,7 +34,7 @@ public class Calculator {
     }
 
     public boolean isSupported(String operation) {
-        if (operation.equals("add") || (operation.equals("subtract")) || (operation.equals("multiply")) || (operation.equals("divide")) || (operation.equals("cancel") || (operation.equals("exit"))))
+        if (SUPPORTED_OPERATIONS.contains(operation))
             return true;
         return false;
     }
