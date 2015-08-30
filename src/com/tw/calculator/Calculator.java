@@ -8,6 +8,6 @@ public class Calculator {
     }
 
     public double subtract(double subtrahend) {
-        return - subtrahend;
+        return number - subtrahend;
     }
 }

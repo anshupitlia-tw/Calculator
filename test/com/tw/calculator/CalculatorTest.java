@@ -41,4 +41,12 @@ public class CalculatorTest {
 
         assertEquals(-5.0, calculator.subtract(5.0), 0001);
     }
+
+    @Test
+    public void shouldReturnTwoIfFiveIsSubtractedAfterSevenWasAdded() {
+        Calculator calculator = new Calculator();
+        calculator.add(7.0);
+
+        assertEquals(2.0, calculator.subtract(5.0), 0001);
+    }
 }
