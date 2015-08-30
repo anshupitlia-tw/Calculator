@@ -129,4 +129,12 @@ public class CalculatorTest {
 
         assertEquals(Double.NaN, calculator.add(4.0), 0.0001);
     }
+
+    @Test
+    public void shouldReturnZeroIfOperationsAreCancelled() {
+        Calculator calculator = new Calculator();
+        calculator.cancel();
+
+        assertEquals(0.0, calculator.cancel(), 0.0001);
+    }
 }

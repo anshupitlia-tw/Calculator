@@ -21,4 +21,8 @@ public class Calculator {
         else
             return number = number / dividend;
     }
+
+    public double cancel() {
+        return 0.0;
+    }
 }
