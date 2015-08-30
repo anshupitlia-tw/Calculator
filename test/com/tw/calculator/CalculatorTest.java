@@ -2,6 +2,9 @@ package com.tw.calculator;
 
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
@@ -221,5 +224,17 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
 
         assertEquals(true, calculator.isSupported("exit"));
+    }
+
+    @Test
+    public void shouldDisplayTheResultOnScreen() {
+        final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Calculator calculator = new Calculator();
+        calculator.add(5.0);
+        calculator.displayResult();
+
+        assertEquals("5.0", outContent.toString());
     }
 }

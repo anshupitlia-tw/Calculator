@@ -38,4 +38,8 @@ public class Calculator {
             return true;
         return false;
     }
+
+    public void displayResult() {
+        System.out.print(number);
+    }
 }
