@@ -14,4 +14,8 @@ public class Calculator {
     public double multiply(double factor) {
         return number = number * factor;
     }
+
+    public double divide(double divident) {
+        return Double.NaN;
+    }
 }

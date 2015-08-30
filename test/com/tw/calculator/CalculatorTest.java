@@ -66,7 +66,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldReturnTheNumberItselfIfOneIsMultipliedToAnyNumber() {
+    public void shouldReturnTheNumberItselfIfOneIsMultipliedToAnyNumberSatisfyingMultiplicativeIdentity() {
         Calculator calculator = new Calculator();
         calculator.add(5.0);
 
@@ -88,5 +88,12 @@ public class CalculatorTest {
         calculator.multiply(5.0);
 
         assertEquals(10.0, calculator.multiply(2.0), 0.0001);
+    }
+
+    @Test
+    public void shouldReturnNotANumberIfZeroDividesInitially() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(Double.NaN, calculator.divide(0.0), 0.0001);
     }
 }
