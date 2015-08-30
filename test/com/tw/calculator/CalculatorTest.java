@@ -215,4 +215,11 @@ public class CalculatorTest {
 
         assertEquals(true, calculator.isSupported("cancel"));
     }
+
+    @Test
+    public void shouldConsiderOperationToBeSupportedIfOperationIsExit() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(true, calculator.isSupported("exit"));
+    }
 }
