@@ -180,4 +180,11 @@ public class CalculatorTest {
 
         assertEquals(true, calculator.isSupported("add"));
     }
+
+    @Test
+    public void shouldReturnFalseIfOperationIsNotAddButSin() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(false, calculator.isSupported("sin"));
+    }
 }
