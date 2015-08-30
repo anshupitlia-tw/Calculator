@@ -15,7 +15,10 @@ public class Calculator {
         return number = number * factor;
     }
 
-    public double divide(double divident) {
-        return Double.NaN;
+    public double divide(double dividend) {
+        if (dividend == 0.0)
+            return Double.NaN;
+        else
+            return number;
     }
 }

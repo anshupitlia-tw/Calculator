@@ -96,4 +96,12 @@ public class CalculatorTest {
 
         assertEquals(Double.NaN, calculator.divide(0.0), 0.0001);
     }
+
+    @Test
+    public void shouldReturnTheNumberItselfIfOneDividesAnyNumber() {
+        Calculator calculator = new Calculator();
+        calculator.add(5.0);
+
+        assertEquals(5.0, calculator.divide(1.0), 0.0001);
+    }
 }
