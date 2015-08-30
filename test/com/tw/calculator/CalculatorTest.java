@@ -121,4 +121,12 @@ public class CalculatorTest {
 
         assertEquals(2.0, calculator.divide(5.0), 0.0001);
     }
+
+    @Test
+    public void shouldReturnNotANumberIfANumberIsAddedToNotANumberObtainedOnDividingByZero() {
+        Calculator calculator = new Calculator();
+        calculator.divide(0.0);
+
+        assertEquals(Double.NaN, calculator.add(4.0), 0.0001);
+    }
 }
