@@ -1,6 +1,8 @@
 package com.tw.calculator;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -8,6 +10,9 @@ import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
+
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
     public void shouldReturnZeroIfZeroIsAddedInitially() {
@@ -159,22 +164,12 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldReturnTrueIfApplicationIsAbleToExit() {
-        Calculator calculator = new Calculator();
-        calculator.add(5.0);
+    public void shouldBeAbleToExitTheApplicationOnExit() {
+        exit.expectSystemExitWithStatus(0);
 
-        assertEquals(true, calculator.exit());
-
-    }
-
-    @Test
-    public void shouldBeAbleToStartAgainIfApplicationIsAbleToExit() {
         Calculator calculator = new Calculator();
         calculator.add(5.0);
         calculator.exit();
-
-        assertEquals(5.0, calculator.add(5.0), 0.0001);
-
     }
 
     @Test

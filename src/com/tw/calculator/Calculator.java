@@ -28,9 +28,8 @@ public class Calculator {
         return number = INITIAL_NUMBER;
     }
 
-    public boolean exit() {
-        number = INITIAL_NUMBER;
-        return true;
+    public void exit() {
+        System.exit(0);
     }
 
     public boolean isSupported(String operation) {
