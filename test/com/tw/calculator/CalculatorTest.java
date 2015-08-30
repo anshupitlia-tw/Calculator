@@ -59,9 +59,17 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldReturnZeroWhenZeroIsMultipliedToInitially() {
+    public void shouldReturnZeroWhenZeroIsMultipliedInitially() {
         Calculator calculator = new Calculator();
 
         assertEquals(0.0, calculator.multiply(0.0), 0.0001);
+    }
+
+    @Test
+    public void shouldReturnTheNumberItselfIfOneIsMultipliedToAnyNumber() {
+        Calculator calculator = new Calculator();
+        calculator.add(5.0);
+
+        assertEquals(5.0, calculator.multiply(1.0), 0.0001);
     }
 }
