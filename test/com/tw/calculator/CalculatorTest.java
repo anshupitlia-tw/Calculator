@@ -72,4 +72,12 @@ public class CalculatorTest {
 
         assertEquals(5.0, calculator.multiply(1.0), 0.0001);
     }
+
+    @Test
+    public void shouldReturnTheFifteenIfThreeIsMultipliedToFive() {
+        Calculator calculator = new Calculator();
+        calculator.add(5.0);
+
+        assertEquals(15.0, calculator.multiply(3.0), 0.0001);
+    }
 }

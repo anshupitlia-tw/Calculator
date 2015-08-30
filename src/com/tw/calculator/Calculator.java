@@ -12,6 +12,6 @@ public class Calculator {
     }
 
     public double multiply(double factor) {
-        return number;
+        return number * factor;
     }
 }
