@@ -175,16 +175,23 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldReturnTrueIfOperationIsAdd() {
+    public void shouldConsiderOperationToBeValidIfOperationIsAdd() {
         Calculator calculator = new Calculator();
 
         assertEquals(true, calculator.isSupported("add"));
     }
 
     @Test
-    public void shouldReturnFalseIfOperationIsNotAddButSin() {
+    public void shouldConsiderOperationToBeUnsupportedIfOperationIsNotAddButSin() {
         Calculator calculator = new Calculator();
 
         assertEquals(false, calculator.isSupported("sin"));
+    }
+
+    @Test
+    public void shouldConsiderOperationToBeSupportedIfOperationIsSubtract() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(true, calculator.isSupported("subtract"));
     }
 }
