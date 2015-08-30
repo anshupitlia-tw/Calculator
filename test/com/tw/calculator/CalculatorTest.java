@@ -208,4 +208,11 @@ public class CalculatorTest {
 
         assertEquals(true, calculator.isSupported("divide"));
     }
+
+    @Test
+    public void shouldConsiderOperationToBeSupportedIfOperationIsCancel() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(true, calculator.isSupported("cancel"));
+    }
 }
