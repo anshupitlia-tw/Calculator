@@ -21,10 +21,17 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldReturnResultSevenIfItFiveIsAddedToNumberTwo() {
+    public void shouldReturnResultSevenIfItFiveIsAddedToNumberTwoWhichWasAddedEarlier() {
         Calculator calculator = new Calculator();
         calculator.add(2.0);
 
         assertEquals(7.0, calculator.add(5.0), 0.0001);
+    }
+
+    @Test
+    public void shouldReturnZeroIfZeroIsSubtractedInitially() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(0.0, calculator.subract(0.0), 0001);
     }
 }

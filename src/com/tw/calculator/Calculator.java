@@ -6,4 +6,8 @@ public class Calculator {
     public double add(double addend) {
         return number = number + addend;
     }
+
+    public double subract(double subtrahend) {
+        return 0.0;
+    }
 }
