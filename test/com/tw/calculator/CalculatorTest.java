@@ -194,4 +194,11 @@ public class CalculatorTest {
 
         assertEquals(true, calculator.isSupported("subtract"));
     }
+
+    @Test
+    public void shouldConsiderOperationToBeSupportedIfOperationIsMultiply() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(true, calculator.isSupported("multiply"));
+    }
 }

@@ -30,7 +30,7 @@ public class Calculator {
     }
 
     public boolean isSupported(String operation) {
-        if (operation.equals("add") || (operation.equals("subtract")))
+        if (operation.equals("add") || (operation.equals("subtract")) || (operation.equals("multiply")))
             return true;
         return false;
     }
