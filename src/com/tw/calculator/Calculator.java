@@ -4,6 +4,6 @@ public class Calculator {
     private double number;
 
     public double add(double addend) {
-        return addend;
+        return number = number + addend;
     }
 }
