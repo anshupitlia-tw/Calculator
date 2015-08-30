@@ -2,6 +2,7 @@ package com.tw.calculator;
 
 public class Calculator {
     private double number;
+    private static double INITIAL_NUMBER = 0.0;
 
     public double add(double addend) {
         return number = number + addend;
@@ -20,11 +21,11 @@ public class Calculator {
     }
 
     public double cancel() {
-        return number = 0.0;
+        return number = INITIAL_NUMBER;
     }
 
     public boolean exit() {
-        number = 0.0;
+        number = INITIAL_NUMBER;
         return true;
     }
 }
