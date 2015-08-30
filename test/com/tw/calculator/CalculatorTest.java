@@ -12,4 +12,11 @@ public class CalculatorTest {
 
         assertEquals(0.0, calculator.add(0.0), 0.0001);
     }
+
+    @Test
+    public void shouldReturnTheNumberToBeAddedIfItIsAddedInitiallySatisyingTheAdditiveIdentityProperty() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(5.0, calculator.add(5.0), 0.0001);
+    }
 }
