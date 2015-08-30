@@ -1,6 +1,6 @@
 # Geometry
 
-**PROBLEM DESCRIPTION**
+##PROBLEM DESCRIPTION
 
 A Calculator that performs basic arithmetic operations on a number.
 
@@ -10,20 +10,34 @@ A Calculator that performs basic arithmetic operations on a number.
 - JDK, (Developed and tested in 1.7)
 - Apache ant for building (developed and tested in version 1.9.6)
 
-**FOR BUILDING THE CODEBASE**
+##FOR BUILDING THE CODEBASE
 
 Give this command
 
-    ant build
+````
+ant build
 
-**FOR RUNNING THE CODEBASE**
+````
 
-As of now, the application is not runnable
+##FOR RUNNING THE CODEBASE
 
-**FOR AUTOMATING THE TESTING OF CODEBASE**
+Give this command:
+
+````
+ant run
+
+````
+
+##FOR AUTOMATING THE TESTING OF CODEBASE
 
 Give any of these commands
 
-    ant
+````
+ant
 
-    ant runJunit
+````
+
+````
+ant runJunit
+
+````
