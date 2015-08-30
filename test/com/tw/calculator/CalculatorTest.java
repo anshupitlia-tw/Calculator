@@ -106,6 +106,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void shouldReturnOneIfNumberDividesItself() {
+        Calculator calculator = new Calculator();
+        calculator.add(5.0);
+
+        assertEquals(1.0, calculator.divide(5.0), 0.0001);
+    }
+
+    @Test
     public void shouldReturnTwoIfFiveDividesTen() {
         Calculator calculator = new Calculator();
         calculator.add(10.0);
@@ -136,5 +144,14 @@ public class CalculatorTest {
         calculator.cancel();
 
         assertEquals(0.0, calculator.cancel(), 0.0001);
+    }
+
+    @Test
+    public void shouldReturnTheNumberIfTheNumberIsAddedAfterOperationsAreCancelled() {
+        Calculator calculator = new Calculator();
+        calculator.add(5.0);
+        calculator.cancel();
+
+        assertEquals(5.0, calculator.add(5.0), 0.0001);
     }
 }
