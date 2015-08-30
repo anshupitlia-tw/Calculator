@@ -19,6 +19,6 @@ public class Calculator {
         if (dividend == 0.0)
             return Double.NaN;
         else
-            return number / dividend;
+            return number = number / dividend;
     }
 }

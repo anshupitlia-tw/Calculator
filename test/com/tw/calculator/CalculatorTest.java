@@ -112,4 +112,13 @@ public class CalculatorTest {
 
         assertEquals(2.0, calculator.divide(5.0), 0.0001);
     }
+
+    @Test
+    public void shouldReturnTwoIfFiveDividesTenWhichIsObtainedOnDividingTwentyByTwo() {
+        Calculator calculator = new Calculator();
+        calculator.add(20.0);
+        calculator.divide(2.0);
+
+        assertEquals(2.0, calculator.divide(5.0), 0.0001);
+    }
 }
