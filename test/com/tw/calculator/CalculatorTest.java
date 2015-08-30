@@ -154,4 +154,13 @@ public class CalculatorTest {
 
         assertEquals(5.0, calculator.add(5.0), 0.0001);
     }
+
+    @Test
+    public void shouldReturnTrueIfApplicationIsAbleToExit() {
+        Calculator calculator = new Calculator();
+        calculator.add(5.0);
+
+        assertEquals(true, calculator.exit());
+
+    }
 }

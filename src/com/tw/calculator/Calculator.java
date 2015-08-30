@@ -27,4 +27,8 @@ public class Calculator {
     public double cancel() {
         return number = 0.0;
     }
+
+    public boolean exit() {
+        return true;
+    }
 }
