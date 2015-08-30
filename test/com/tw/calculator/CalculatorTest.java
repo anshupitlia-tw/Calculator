@@ -32,6 +32,13 @@ public class CalculatorTest {
     public void shouldReturnZeroIfZeroIsSubtractedInitially() {
         Calculator calculator = new Calculator();
 
-        assertEquals(0.0, calculator.subract(0.0), 0001);
+        assertEquals(0.0, calculator.subtract(0.0), 0001);
+    }
+
+    @Test
+    public void shouldReturnNegativeSelfNumberIfANumberIsSubtractedInitially() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(-5.0, calculator.subtract(5.0), 0001);
     }
 }
