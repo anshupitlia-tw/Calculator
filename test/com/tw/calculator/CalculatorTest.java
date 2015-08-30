@@ -49,4 +49,12 @@ public class CalculatorTest {
 
         assertEquals(2.0, calculator.subtract(5.0), 0001);
     }
+
+    @Test
+    public void shouldReturnNegativeSevenIfFiveIsSubtractedAfterTwoWasSubtracted() {
+        Calculator calculator = new Calculator();
+        calculator.subtract(2.0);
+
+        assertEquals(-7.0, calculator.subtract(5.0), 0001);
+    }
 }
