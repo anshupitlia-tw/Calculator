@@ -29,6 +29,7 @@ public class Calculator {
     }
 
     public boolean exit() {
+        number = 0.0;
         return true;
     }
 }
