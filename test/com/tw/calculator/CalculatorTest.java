@@ -104,4 +104,12 @@ public class CalculatorTest {
 
         assertEquals(5.0, calculator.divide(1.0), 0.0001);
     }
+
+    @Test
+    public void shouldReturnTwoIfFiveDividesTen() {
+        Calculator calculator = new Calculator();
+        calculator.add(10.0);
+
+        assertEquals(2.0, calculator.divide(5.0), 0.0001);
+    }
 }
