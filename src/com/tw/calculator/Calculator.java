@@ -10,4 +10,8 @@ public class Calculator {
     public double subtract(double subtrahend) {
         return number = number - subtrahend;
     }
+
+    public double multiply(double factor) {
+        return 0.0;
+    }
 }

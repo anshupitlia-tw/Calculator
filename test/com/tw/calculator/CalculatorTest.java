@@ -32,14 +32,14 @@ public class CalculatorTest {
     public void shouldReturnZeroIfZeroIsSubtractedInitially() {
         Calculator calculator = new Calculator();
 
-        assertEquals(0.0, calculator.subtract(0.0), 0001);
+        assertEquals(0.0, calculator.subtract(0.0), 0.0001);
     }
 
     @Test
     public void shouldReturnNegativeSelfNumberIfANumberIsSubtractedInitially() {
         Calculator calculator = new Calculator();
 
-        assertEquals(-5.0, calculator.subtract(5.0), 0001);
+        assertEquals(-5.0, calculator.subtract(5.0), 0.0001);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         calculator.add(7.0);
 
-        assertEquals(2.0, calculator.subtract(5.0), 0001);
+        assertEquals(2.0, calculator.subtract(5.0), 0.0001);
     }
 
     @Test
@@ -55,6 +55,13 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         calculator.subtract(2.0);
 
-        assertEquals(-7.0, calculator.subtract(5.0), 0001);
+        assertEquals(-7.0, calculator.subtract(5.0), 0.0001);
+    }
+
+    @Test
+    public void shouldReturnZeroWhenZeroIsMultipliedToInitially() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(0.0, calculator.multiply(0.0), 0.0001);
     }
 }
