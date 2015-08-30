@@ -74,10 +74,19 @@ public class CalculatorTest {
     }
 
     @Test
-    public void shouldReturnTheFifteenIfThreeIsMultipliedToFive() {
+    public void shouldReturnFifteenIfThreeIsMultipliedToFive() {
         Calculator calculator = new Calculator();
         calculator.add(5.0);
 
         assertEquals(15.0, calculator.multiply(3.0), 0.0001);
+    }
+
+    @Test
+    public void shouldReturnTenIfTwoIsMultipliedToMultiplicationOfFiveAndOne() {
+        Calculator calculator = new Calculator();
+        calculator.add(1.0);
+        calculator.multiply(5.0);
+
+        assertEquals(10.0, calculator.multiply(2.0), 0.0001);
     }
 }
