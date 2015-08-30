@@ -173,4 +173,11 @@ public class CalculatorTest {
         assertEquals(5.0, calculator.add(5.0), 0.0001);
 
     }
+
+    @Test
+    public void shouldReturnTrueIfOperationIsAdd() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(true, calculator.isSupported("add"));
+    }
 }

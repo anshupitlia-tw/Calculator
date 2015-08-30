@@ -28,4 +28,8 @@ public class Calculator {
         number = INITIAL_NUMBER;
         return true;
     }
+
+    public boolean isSupported(String operation) {
+        return true;
+    }
 }
