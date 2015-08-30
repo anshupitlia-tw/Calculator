@@ -2,11 +2,16 @@
 
 <project name="Calculator" default="runjUnit" basedir=".">
 
+    <property name = "project.name" value="Calculator" />
+    <property name = "main.name" value="CalculatorView" />
+    <property name = "package.name" value="com.tw.calculator" />
+
     <target name="build" depends="clean">
         <mkdir dir="out"/>
         <javac destdir="out">
             <src path="src;test"/>
             <classpath location="lib/junit-4.12.jar"/>
+            <classpath location="lib/system-rules-1.12.0.jar"/>
         </javac>
     </target>
 
@@ -14,11 +19,31 @@
         <delete dir="out"/>
     </target>
 
+    <target name="build-jar" depends="build">
+        <jar destfile="lib/${project.name}.jar"
+             basedir="out"
+             excludes="**/Test.class">
+            <manifest>
+                <attribute name="Main-Class" value="${package.name}.${main.name}"/>
+            </manifest>
+
+        </jar>
+    </target>
+
+    <target name="run" depends="build-jar">
+        <java fork="true" failonerror="yes" classname="${package.name}.${main.name}">
+            <classpath>
+                <path location="lib/${project.name}.jar"/>
+            </classpath>
+        </java>
+    </target>
+
     <target name="runjUnit" depends="build" description="runs the junit test cases">
         <junit printsummary="yes" haltonfailure="true"  showoutput="true">
             <classpath>
                 <pathelement location="lib/junit-4.12.jar"/>
                 <pathelement location="lib/hamcrest-all-1.1.jar"/>
+                <pathelement location="lib/system-rules-1.12.0.jar"/>
                 <pathelement location="out"/>
             </classpath>
             <test name = "com.tw.calculator.CalculatorTest" todir="."/>
