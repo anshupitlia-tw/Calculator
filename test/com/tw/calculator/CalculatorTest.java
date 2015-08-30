@@ -201,4 +201,11 @@ public class CalculatorTest {
 
         assertEquals(true, calculator.isSupported("multiply"));
     }
+
+    @Test
+    public void shouldConsiderOperationToBeSupportedIfOperationIsDivide() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(true, calculator.isSupported("divide"));
+    }
 }
